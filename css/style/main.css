@@ -157,6 +157,11 @@ s {
   font-smoothing: antialiased;
   osx-font-smoothing: grayscale;
 }
+@media screen and (min-width: 1080px) {
+  *[id] {
+    scroll-margin-top: 60px;
+  }
+}
 a {
   color: var(--main-color);
   cursor: pointer;
@@ -1010,6 +1015,13 @@ overflows table td {
 .header .header__right .dropdown-menus .dropdown-menu {
   padding: 10px;
 }
+@media screen and (min-width: 1080px) {
+  .header {
+    position: sticky;
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+  }
+}
 @media screen and (max-width: 764px) {
   .navbar__menus {
     display: none !important;
@@ -1362,4 +1374,35 @@ overflows table td {
     -webkit-transform: translateY(0);
     transform: translateY(0);
   }
+}
+.sliding-fold,
+details {
+  display: block;
+  padding: 16px;
+  margin: 20px 0;
+  background: var(--bg-content-color);
+  border: none;
+  border-radius: 4px;
+  -webkit-box-shadow: 1px 2px 5px 0 rgba(0,0,0,0.3);
+  box-shadow: 1px 2px 5px 0 rgba(0,0,0,0.3);
+  -webkit-transition: all 0.6s;
+  -o-transition: all 0.6s;
+  transition: all 0.6s;
+}
+.sliding-fold>summary,
+details>summary {
+  cursor: pointer;
+  outline: none;
+}
+.sliding-fold .fold-content,
+details .fold-content {
+  margin-top: 20px;
+}
+.sliding-fold .fold-content>:first-child,
+details .fold-content>:first-child {
+  margin-top: 0;
+}
+.sliding-fold .fold-content>:last-child,
+details .fold-content>:last-child {
+  margin-bottom: 0;
 }
