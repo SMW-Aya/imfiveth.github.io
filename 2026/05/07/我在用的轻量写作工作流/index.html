@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
     <head>
     <meta charset="utf-8">
 
@@ -35,7 +35,7 @@
     <!-- meta -->
 
 
-<title>我在用的轻量写作工作流 | 莲台野夜行的博客～</title>
+<title>我在用的轻量写作工作流：把更新频率拉稳 | 莲台野夜行的博客～</title>
 
 
     <meta name="keywords" content="写作, 工作流, 效率, Hexo,Blog,Frontend,Notes">
@@ -46,15 +46,15 @@
     <!-- OpenGraph -->
 
     
-    <meta name="description" content="这套流程的目标很简单：降低开写门槛，保持稳定更新。 1. 灵感收集平时遇到可写的点，先记“一句话题目 + 2 条要点”，不展开。 2. 结构先行动笔前只列三级结构：  这篇要解决什么问题 核心结论是什么 读者看完能拿走什么  3. 先粗写再精修第一版只求完整，不求漂亮。第二版再做：  删废话 补例子 调顺序  4. 发布后复盘每篇发完记录两件事：  哪一段最有价值 下一篇怎么写得更快  这比追求“">
+    <meta name="description" content="这套流程的目标很简单：降低开写门槛，让“持续更新”比“偶尔爆发”更容易发生。 1. 灵感收集平时遇到可写的点，先记“一句话题目 + 2 条要点”，不展开。 2. 结构先行动笔前只列三级结构：  这篇要解决什么问题 核心结论是什么 读者看完能拿走什么  3. 先粗写再精修第一版只求完整，不求漂亮。第二版再做：  删废话 补例子 调顺序  4. 发布后复盘每篇发完记录两件事：  哪一段最有价值 下一篇">
 <meta property="og:type" content="article">
-<meta property="og:title" content="我在用的轻量写作工作流">
+<meta property="og:title" content="我在用的轻量写作工作流：把更新频率拉稳">
 <meta property="og:url" content="https://smw-aya.github.io/2026/05/07/%E6%88%91%E5%9C%A8%E7%94%A8%E7%9A%84%E8%BD%BB%E9%87%8F%E5%86%99%E4%BD%9C%E5%B7%A5%E4%BD%9C%E6%B5%81/index.html">
 <meta property="og:site_name" content="莲台野夜行的博客～">
-<meta property="og:description" content="这套流程的目标很简单：降低开写门槛，保持稳定更新。 1. 灵感收集平时遇到可写的点，先记“一句话题目 + 2 条要点”，不展开。 2. 结构先行动笔前只列三级结构：  这篇要解决什么问题 核心结论是什么 读者看完能拿走什么  3. 先粗写再精修第一版只求完整，不求漂亮。第二版再做：  删废话 补例子 调顺序  4. 发布后复盘每篇发完记录两件事：  哪一段最有价值 下一篇怎么写得更快  这比追求“">
-<meta property="og:locale" content="en_US">
+<meta property="og:description" content="这套流程的目标很简单：降低开写门槛，让“持续更新”比“偶尔爆发”更容易发生。 1. 灵感收集平时遇到可写的点，先记“一句话题目 + 2 条要点”，不展开。 2. 结构先行动笔前只列三级结构：  这篇要解决什么问题 核心结论是什么 读者看完能拿走什么  3. 先粗写再精修第一版只求完整，不求漂亮。第二版再做：  删废话 补例子 调顺序  4. 发布后复盘每篇发完记录两件事：  哪一段最有价值 下一篇">
+<meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2026-05-07T05:35:00.000Z">
-<meta property="article:modified_time" content="2026-05-07T05:30:23.503Z">
+<meta property="article:modified_time" content="2026-05-25T14:56:03.918Z">
 <meta property="article:author" content="莲台野夜行">
 <meta property="article:tag" content="写作">
 <meta property="article:tag" content="工作流">
@@ -93,13 +93,13 @@
                 
                     <a href="/" class="navbar-menu button">首页</a>
                 
+                    <a href="/about/" class="navbar-menu button">关于我</a>
+                
                     <a href="/tags/" class="navbar-menu button">标签</a>
                 
                     <a href="/archives/" class="navbar-menu button">归档</a>
                 
-                    <a href="/friends/" class="navbar-menu button">友链</a>
-                
-                    <a href="/page/" class="navbar-menu button">Page</a>
+                    <a href="/search/" class="navbar-menu button">搜索</a>
                 
             </div>
         
@@ -113,19 +113,23 @@
         
         
 
+        <a href="/about/" class="header-avatar button" aria-label="关于我">
+            <img src="/images/avatar.svg" alt="个人头像" class="header-avatar__image">
+        </a>
+
         
             <a class="dropdown-icon button" id="btn-dropdown" tabindex="0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width='24' height='24' fill="none" stroke="currentColor" stroke-width="0.7" stroke-linecap="round" stroke-linejoin="round"><path fill="currentColor" d="M3.314,4.8h13.372c0.41,0,0.743-0.333,0.743-0.743c0-0.41-0.333-0.743-0.743-0.743H3.314c-0.41,0-0.743,0.333-0.743,0.743C2.571,4.467,2.904,4.8,3.314,4.8z M16.686,15.2H3.314c-0.41,0-0.743,0.333-0.743,0.743s0.333,0.743,0.743,0.743h13.372c0.41,0,0.743-0.333,0.743-0.743S17.096,15.2,16.686,15.2z M16.686,9.257H3.314c-0.41,0-0.743,0.333-0.743,0.743s0.333,0.743,0.743,0.743h13.372c0.41,0,0.743-0.333,0.743-0.743S17.096,9.257,16.686,9.257z"></path></svg></a>
             <div class="dropdown-menus" id="dropdown-menus">
                 
                     <a href="/" class="dropdown-menu button">首页</a>
                 
+                    <a href="/about/" class="dropdown-menu button">关于我</a>
+                
                     <a href="/tags/" class="dropdown-menu button">标签</a>
                 
                     <a href="/archives/" class="dropdown-menu button">归档</a>
                 
-                    <a href="/friends/" class="dropdown-menu button">友链</a>
-                
-                    <a href="/page/" class="dropdown-menu button">Page</a>
+                    <a href="/search/" class="dropdown-menu button">搜索</a>
                 
             </div>
         
@@ -133,12 +137,13 @@
 </header>
 
 
+
             <main class="main">
     
 
 <div class="post-title">
     <h1 class="post-title__text">
-        我在用的轻量写作工作流
+        我在用的轻量写作工作流：把更新频率拉稳
     </h1>
     <div class="post-title__meta">
         <a href="/archives/2026/05/" class="post-meta__date button">2026-05-07</a>
@@ -162,7 +167,7 @@
 <article class="post content-card">
     <div class="post__header"></div>
     <div class="post__content">
-        <p>这套流程的目标很简单：降低开写门槛，保持稳定更新。</p>
+        <p>这套流程的目标很简单：降低开写门槛，让“持续更新”比“偶尔爆发”更容易发生。</p>
 <h2 id="1-灵感收集"><a href="#1-灵感收集" class="headerlink" title="1. 灵感收集"></a>1. 灵感收集</h2><p>平时遇到可写的点，先记“一句话题目 + 2 条要点”，不展开。</p>
 <h2 id="2-结构先行"><a href="#2-结构先行" class="headerlink" title="2. 结构先行"></a>2. 结构先行</h2><p>动笔前只列三级结构：</p>
 <ul>
@@ -182,10 +187,13 @@
 <li>下一篇怎么写得更快</li>
 </ul>
 <p>这比追求“每篇都完美”更现实，也更可持续。</p>
+<h2 id="现在我新增的一步"><a href="#现在我新增的一步" class="headerlink" title="现在我新增的一步"></a>现在我新增的一步</h2><p>最近我会在发布前再问自己一个问题：</p>
+<p>“这篇文章里，有没有一句真正属于我自己的判断？”</p>
+<p>如果没有，我就会再补一点自己的经验，而不是只停留在信息搬运。</p>
 
     </div>
      
-    <div class="post-footer__meta"><p>updated at 2026-05-07</p></div> 
+    <div class="post-footer__meta"><p>更新于 2026-05-25</p></div> 
     <div class="post-entry__tags"><a href="/tags/%E5%86%99%E4%BD%9C/" class="post-tags__link button"># 写作</a><a href="/tags/%E5%B7%A5%E4%BD%9C%E6%B5%81/" class="post-tags__link button"># 工作流</a><a href="/tags/%E6%95%88%E7%8E%87/" class="post-tags__link button"># 效率</a></div> 
 </article>
 
@@ -199,10 +207,10 @@
                     </div>
                     <div>
                         <div class="nav__label">
-                            Previous Post
+                            上一篇
                         </div>
                         <div class="nav__title">
-                            2026 我的博客工具箱
+                            2026 我的博客工具箱：从写作到发布的轻量组合
                         </div>
                     </div>
                 </a>
@@ -213,7 +221,7 @@
                 <a href="/2026/05/07/Hexo-%E5%8D%9A%E5%AE%A2%E4%BB%8E-0-%E5%88%B0-1-%E7%9A%84%E6%9C%80%E5%B0%8F%E9%85%8D%E7%BD%AE%E6%B8%85%E5%8D%95/" class="nav__link">
                     <div>
                         <div class="nav__label">
-                            Next Post
+                            下一篇
                         </div>
                         <div class="nav__title">
                             Hexo 博客从 0 到 1 的最小配置清单
@@ -231,7 +239,7 @@
 
     <div class="post__comments content-card" id="comment">
         
-    <h4>Comments</h4>
+    <h4>评论</h4>
     
     
     
@@ -365,6 +373,8 @@
 
 
 
+
+<script defer src="/js/site.js"></script>
 
     </body>
 </html>

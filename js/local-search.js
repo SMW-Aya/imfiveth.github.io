@@ -183,14 +183,14 @@ function loadDataSearch(searchDataFile, skeys) {
 
             if (resultCount !== 0) {
                 const finishTime = performance.now();
-                setNotice(`${resultCount} related results found (in ${Math.round((finishTime - startTime) * 100) / 100} ms)`);
+                setNotice(`找到 ${resultCount} 条相关结果（耗时 ${Math.round((finishTime - startTime) * 100) / 100} ms）`);
                 resultArray.sort((a, b) => {
                     return b[1] - a[1];
                 });
                 createPosts(resultArray);
             } else {
                 const finishTime = performance.now();
-                setNotice(`No related result found (in ${Math.round((finishTime - startTime) * 100) / 100} ms)`);
+                setNotice(`没有找到相关内容（耗时 ${Math.round((finishTime - startTime) * 100) / 100} ms）`);
                 clearPosts();
             }
         });
