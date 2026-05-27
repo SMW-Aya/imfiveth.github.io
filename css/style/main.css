@@ -1,18 +1,18 @@
 :root {
   --main-color: #5d7cff;
   --bg-color: #f4f4f4;
-  --bg-content-color: rgba(255,255,255,0.56);
-  --bg-menu: rgba(255,255,255,0.42);
-  --bg-tag-color: rgba(255,255,255,0.56);
-  --bg-code: rgba(244,246,252,0.92);
-  --bg-codeblock: rgba(248,250,255,0.92);
-  --body-color: #4c4d4e;
-  --title-color: #50596c;
-  --border-color: rgba(255,255,255,0.38);
+  --bg-content-color: rgba(255,255,255,0.38);
+  --bg-menu: rgba(255,255,255,0.3);
+  --bg-tag-color: rgba(255,255,255,0.34);
+  --bg-code: rgba(246,246,246,0.88);
+  --bg-codeblock: rgba(250,250,250,0.9);
+  --body-color: #232323;
+  --title-color: #121212;
+  --border-color: rgba(255,255,255,0.24);
   --space: 3.5rem;
   --content-width: 776px;
-  --glass-shadow: 0 24px 80px rgba(88,109,179,0.18);
-  --glass-stroke: 1px solid rgba(255,255,255,0.48);
+  --glass-shadow: 0 16px 48px rgba(0,0,0,0.12);
+  --glass-stroke: 1px solid rgba(255,255,255,0.3);
 }
 ::-webkit-scrollbar {
   width: 0.55rem !important;
@@ -20,7 +20,7 @@
   background: 0 0 !important;
 }
 ::-webkit-scrollbar-thumb {
-  background: rgba(130,144,178,0.5) !important;
+  background: rgba(48,48,48,0.3) !important;
   border-radius: 999px;
 }
 @media screen and (max-width: 762px) {
@@ -34,14 +34,14 @@ body {
   scroll-behavior: smooth;
 }
 html {
-  background: linear-gradient(180deg, #f4f7ff 0%, #edf2ff 36%, #e7eefc 100%);
+  background: linear-gradient(180deg, #f4f4f4 0%, #e9e9e9 40%, #ddd 100%);
 }
 body {
   --base-font-size: 16px;
   font-size: var(--base-font-size);
   font-weight: 400;
   font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "PingFang SC", "Helvetica Neue", sans-serif;
-  background: radial-gradient(circle at top left, rgba(154,182,255,0.52), transparent 28%), radial-gradient(circle at 85% 12%, rgba(255,255,255,0.86), transparent 18%), linear-gradient(180deg, #f8fbff 0%, #eef3ff 48%, #edf1fb 100%);
+  background: radial-gradient(circle at 8% 2%, rgba(255,255,255,0.62), transparent 30%), radial-gradient(circle at 92% 14%, rgba(0,0,0,0.08), transparent 22%), linear-gradient(180deg, #fafafa 0%, #ededed 48%, #e2e2e2 100%);
   background-attachment: fixed;
   color: var(--body-color);
   -webkit-transition: color 0.6s, background-color 0.6s;
@@ -56,7 +56,7 @@ body:before {
   content: '';
   position: fixed;
   inset: 0;
-  background: radial-gradient(circle at 20% 20%, rgba(255,255,255,0.72), transparent 0 26%), radial-gradient(circle at 82% 10%, rgba(121,150,255,0.18), transparent 0 16%), radial-gradient(circle at 74% 72%, rgba(255,255,255,0.52), transparent 0 18%);
+  background: radial-gradient(circle at 18% 16%, rgba(255,255,255,0.5), transparent 0 24%), radial-gradient(circle at 84% 12%, rgba(0,0,0,0.07), transparent 0 16%), radial-gradient(circle at 70% 72%, rgba(255,255,255,0.35), transparent 0 20%);
   pointer-events: none;
   z-index: -1;
 }
@@ -93,11 +93,11 @@ a {
   transform: translateY(-1px);
 }
 .glass-panel {
-  background: linear-gradient(180deg, rgba(255,255,255,0.72), rgba(247,250,255,0.48));
+  background: linear-gradient(180deg, rgba(255,255,255,0.44), rgba(255,255,255,0.24));
   border: var(--glass-stroke);
   box-shadow: var(--glass-shadow);
-  backdrop-filter: blur(28px) saturate(150%);
-  -webkit-backdrop-filter: blur(28px) saturate(150%);
+  backdrop-filter: blur(22px) saturate(110%);
+  -webkit-backdrop-filter: blur(22px) saturate(110%);
 }
 .main {
   margin: 0 auto;
@@ -996,7 +996,7 @@ overflows table td {
   font-size: 0.85rem;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: rgba(56,73,113,0.64);
+  color: rgba(28,28,28,0.56);
 }
 .cover .cover__logo {
   max-width: 560px;
@@ -1006,7 +1006,7 @@ overflows table td {
   font-size: clamp(2.8rem, 6vw, 4.9rem);
   line-height: 0.95;
   margin: 0;
-  color: #13203c;
+  color: #111;
   letter-spacing: -0.06em;
 }
 .cover .cover__avatar {
@@ -1019,7 +1019,7 @@ overflows table td {
   max-width: 34rem;
   margin-top: 1rem;
   font-size: 1rem;
-  color: rgba(27,39,67,0.78);
+  color: rgba(20,20,20,0.78);
 }
 .cover .cover__intro p {
   margin: 0;
@@ -1035,9 +1035,9 @@ overflows table td {
   align-items: center;
   padding: 0.7rem 1rem;
   border-radius: 999px;
-  background: rgba(255,255,255,0.5);
-  border: 1px solid rgba(255,255,255,0.48);
-  color: rgba(31,45,76,0.78);
+  background: rgba(255,255,255,0.3);
+  border: 1px solid rgba(255,255,255,0.26);
+  color: rgba(20,20,20,0.72);
   font-size: 0.92rem;
 }
 .cover .cover__actions {
@@ -1053,14 +1053,14 @@ overflows table td {
   padding: 0.95rem 1.35rem;
   border-radius: 999px;
   text-decoration: none;
-  color: #1c2a49;
-  background: rgba(255,255,255,0.5);
-  border: 1px solid rgba(255,255,255,0.52);
-  box-shadow: 0 12px 30px rgba(99,114,161,0.12);
+  color: #141414;
+  background: rgba(255,255,255,0.34);
+  border: 1px solid rgba(255,255,255,0.26);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
 }
 .cover .cover__action.cover__action--primary {
-  background: linear-gradient(135deg, rgba(87,121,255,0.96), rgba(111,168,255,0.92));
-  color: #fff;
+  background: linear-gradient(135deg, rgba(28,28,28,0.9), rgba(62,62,62,0.9));
+  color: #f5f5f5;
 }
 .cover-player {
   padding: 1.25rem;
@@ -1081,12 +1081,12 @@ overflows table td {
   font-size: 0.8rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: rgba(55,73,113,0.58);
+  color: rgba(24,24,24,0.56);
 }
 .cover-player__title {
   margin: 0;
   font-size: 1.35rem;
-  color: #15233f;
+  color: #161616;
 }
 .cover-player__badge {
   display: inline-flex;
@@ -1095,9 +1095,9 @@ overflows table td {
   min-width: 52px;
   height: 32px;
   border-radius: 999px;
-  background: rgba(255,255,255,0.56);
-  border: 1px solid rgba(255,255,255,0.5);
-  color: rgba(52,73,115,0.8);
+  background: rgba(255,255,255,0.28);
+  border: 1px solid rgba(255,255,255,0.24);
+  color: rgba(20,20,20,0.72);
   font-size: 0.8rem;
 }
 .cover-player__art {
@@ -1109,9 +1109,9 @@ overflows table td {
   width: 156px;
   height: 156px;
   border-radius: 50%;
-  background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.96), rgba(160,192,255,0.72) 26%, rgba(81,112,230,0.95) 62%, rgba(20,32,68,0.96) 100%);
+  background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.94), rgba(210,210,210,0.76) 28%, rgba(114,114,114,0.95) 62%, rgba(18,18,18,0.95) 100%);
   position: relative;
-  box-shadow: inset 0 0 0 18px rgba(255,255,255,0.18), 0 20px 50px rgba(59,84,166,0.2);
+  box-shadow: inset 0 0 0 18px rgba(255,255,255,0.16), 0 16px 42px rgba(0,0,0,0.2);
   animation: disc-spin 14s linear infinite;
   animation-play-state: paused;
 }
@@ -1125,18 +1125,19 @@ overflows table td {
   border-radius: 50%;
   background: rgba(255,255,255,0.94);
   box-shadow: 0 0 0 10px rgba(15,27,60,0.12);
+  box-shadow: 0 0 0 10px rgba(16,16,16,0.16);
 }
 .cover-player.is-playing .cover-player__disc {
   animation-play-state: running;
 }
 .cover-player__track strong {
   display: block;
-  color: #182748;
+  color: #121212;
   font-size: 1.1rem;
 }
 .cover-player__track p {
   margin: 0.3rem 0 0;
-  color: rgba(65,82,122,0.72);
+  color: rgba(20,20,20,0.62);
 }
 .cover-player__progress {
   margin-top: 1.25rem;
@@ -1144,7 +1145,7 @@ overflows table td {
 .cover-player__progress-bar {
   height: 6px;
   border-radius: 999px;
-  background: rgba(255,255,255,0.66);
+  background: rgba(255,255,255,0.4);
   overflow: hidden;
 }
 .cover-player__progress-bar span {
@@ -1152,14 +1153,14 @@ overflows table td {
   width: 0;
   height: 100%;
   border-radius: inherit;
-  background: linear-gradient(90deg, #7598ff 0%, #4f71f2 100%);
+  background: linear-gradient(90deg, #111 0%, #585858 100%);
 }
 .cover-player__time {
   display: flex;
   justify-content: space-between;
   margin-top: 0.6rem;
   font-size: 0.82rem;
-  color: rgba(70,84,119,0.72);
+  color: rgba(22,22,22,0.62);
 }
 .cover-player__controls {
   display: flex;
@@ -1175,10 +1176,10 @@ overflows table td {
   justify-content: center;
   border: none;
   cursor: pointer;
-  color: #24355a;
-  background: rgba(255,255,255,0.58);
-  border: 1px solid rgba(255,255,255,0.52);
-  box-shadow: 0 14px 30px rgba(97,112,160,0.14);
+  color: #1a1a1a;
+  background: rgba(255,255,255,0.32);
+  border: 1px solid rgba(255,255,255,0.24);
+  box-shadow: 0 12px 26px rgba(0,0,0,0.12);
 }
 .cover-player__control {
   width: 52px;
@@ -1189,8 +1190,8 @@ overflows table td {
   width: 66px;
   height: 66px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #597cff, rgba(120,190,255,0.95));
-  color: #fff;
+  background: linear-gradient(135deg, rgba(20,20,20,0.95), rgba(68,68,68,0.92));
+  color: #f8f8f8;
 }
 @media screen and (max-width: 900px) {
   .cover.cover--ios {
