@@ -973,14 +973,14 @@ overflows table td {
   padding: 0;
 }
 .cover-wrap {
-  max-width: 1120px;
+  max-width: var(--content-width);
   margin: 0 auto;
   padding: 2rem 12px 2.5rem;
 }
 .cover.cover--ios {
   display: grid;
-  grid-template-columns: minmax(0, 0.92fr) minmax(280px, 0.58fr);
-  gap: 1rem;
+  grid-template-columns: minmax(0, 1fr) minmax(260px, 0.78fr);
+  gap: 0.62rem;
   align-items: stretch;
 }
 .cover .cover__main {
@@ -989,8 +989,7 @@ overflows table td {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  max-width: 680px;
-  justify-self: start;
+  border-radius: 28px;
 }
 .cover .cover__eyebrow {
   font-size: 0.85rem;
@@ -1068,8 +1067,7 @@ overflows table td {
   flex-direction: column;
   justify-content: space-between;
   min-height: 420px;
-  max-width: 340px;
-  justify-self: end;
+  border-radius: 28px;
 }
 .cover-player__header {
   display: flex;
