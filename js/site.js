@@ -10,11 +10,6 @@
             artist: 'Lotus Night Drive',
             src: '/audio-glass-morning.m4a',
         },
-        {
-            title: 'Blue Haze Loop',
-            artist: 'Static Garden',
-            src: '/audio-glass-morning.m4a',
-        },
     ];
 
     const trackTitle = document.getElementById('player-track-title');
@@ -68,6 +63,7 @@
     }
 
     function stepTrack(direction) {
+        if (playlist.length <= 1) return;
         currentIndex = (currentIndex + direction + playlist.length) % playlist.length;
         loadTrack(currentIndex);
         togglePlay();
@@ -90,6 +86,10 @@
     audio.addEventListener('ended', () => stepTrack(1));
     audio.addEventListener('pause', () => renderPlayIcon(false));
     audio.addEventListener('play', () => renderPlayIcon(true));
+    audio.addEventListener('error', () => {
+        renderPlayIcon(false);
+        trackArtist.textContent = '音频加载失败，请检查文件路径/格式';
+    });
 
     loadTrack(currentIndex);
 })();
