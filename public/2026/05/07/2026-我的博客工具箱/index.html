@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+
+    
+
+    <!-- 渲染优化 -->
+    <meta name="renderer" content="webkit">
+    <meta name="force-rendering" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="HandheldFriendly" content="True" >
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!--icon-->
+
+    
+        <link rel="shortcut icon" href="/images/favicon.svg">
+    
+    
+        <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.svg">
+    
+    
+        <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.svg">
+    
+    
+        <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon.svg">
+    
+    
+        <link rel="mask-icon" href="/images/favicon.svg">
+    
+
+
+    <!-- meta -->
+
+
+<title>2026 我的博客工具箱 | 莲台野夜行的博客～</title>
+
+
+    <meta name="keywords" content="工具, 博客, Hexo,Blog,Frontend,Notes">
+
+
+
+
+    <!-- OpenGraph -->
+
+    
+    <meta name="description" content="这里整理我现在写博客会用到的工具，后续会持续更新。 建站 Hexo：静态博客框架 GitHub Pages：托管与发布  写作 Markdown：正文编写 本地编辑器：草稿与批量修改  运营 站内搜索：用于历史内容检索 统计分析：看哪些内容真正被阅读  选择标准工具不求最多，只看三点：  上手成本低 可长期维护 数据可迁移">
+<meta property="og:type" content="article">
+<meta property="og:title" content="2026 我的博客工具箱">
+<meta property="og:url" content="https://smw-aya.github.io/2026/05/07/2026-%E6%88%91%E7%9A%84%E5%8D%9A%E5%AE%A2%E5%B7%A5%E5%85%B7%E7%AE%B1/index.html">
+<meta property="og:site_name" content="莲台野夜行的博客～">
+<meta property="og:description" content="这里整理我现在写博客会用到的工具，后续会持续更新。 建站 Hexo：静态博客框架 GitHub Pages：托管与发布  写作 Markdown：正文编写 本地编辑器：草稿与批量修改  运营 站内搜索：用于历史内容检索 统计分析：看哪些内容真正被阅读  选择标准工具不求最多，只看三点：  上手成本低 可长期维护 数据可迁移">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2026-05-07T05:40:00.000Z">
+<meta property="article:modified_time" content="2026-05-07T05:08:38.753Z">
+<meta property="article:author" content="莲台野夜行">
+<meta property="article:tag" content="工具">
+<meta property="article:tag" content="博客">
+<meta name="twitter:card" content="summary_large_image">
+
+
+
+    
+<link rel="stylesheet" href="/css/style/main.css">
+ 
+
+    
+    
+    
+
+    
+
+     
+
+    <!-- custom head -->
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+    <body>
+        <div id="app" tabindex="-1">
+            <header class="header">
+    <div class="header__left">
+        <a href="/" class="button">
+            <span class="logo__text">莲台野夜行</span>
+        </a>
+    </div>
+    <div class="header__right">
+        
+            <div class="navbar__menus">
+                
+                    <a href="/" class="navbar-menu button">首页</a>
+                
+                    <a href="/tags/" class="navbar-menu button">标签</a>
+                
+                    <a href="/archives/" class="navbar-menu button">归档</a>
+                
+                    <a href="/friends/" class="navbar-menu button">友链</a>
+                
+                    <a href="/page/" class="navbar-menu button">Page</a>
+                
+            </div>
+        
+        
+        
+    <a href="/search/" id="btn-search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="24" height="24" fill="currentColor" stroke="currentColor" stroke-width="32"><path d="M192 448c0-141.152 114.848-256 256-256s256 114.848 256 256-114.848 256-256 256-256-114.848-256-256z m710.624 409.376l-206.88-206.88A318.784 318.784 0 0 0 768 448c0-176.736-143.264-320-320-320S128 271.264 128 448s143.264 320 320 320a318.784 318.784 0 0 0 202.496-72.256l206.88 206.88 45.248-45.248z"></path></svg>
+    </a>
+
+
+        
+        
+
+        
+            <a class="dropdown-icon button" id="btn-dropdown" tabindex="0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width='24' height='24' fill="none" stroke="currentColor" stroke-width="0.7" stroke-linecap="round" stroke-linejoin="round"><path fill="currentColor" d="M3.314,4.8h13.372c0.41,0,0.743-0.333,0.743-0.743c0-0.41-0.333-0.743-0.743-0.743H3.314c-0.41,0-0.743,0.333-0.743,0.743C2.571,4.467,2.904,4.8,3.314,4.8z M16.686,15.2H3.314c-0.41,0-0.743,0.333-0.743,0.743s0.333,0.743,0.743,0.743h13.372c0.41,0,0.743-0.333,0.743-0.743S17.096,15.2,16.686,15.2z M16.686,9.257H3.314c-0.41,0-0.743,0.333-0.743,0.743s0.333,0.743,0.743,0.743h13.372c0.41,0,0.743-0.333,0.743-0.743S17.096,9.257,16.686,9.257z"></path></svg></a>
+            <div class="dropdown-menus" id="dropdown-menus">
+                
+                    <a href="/" class="dropdown-menu button">首页</a>
+                
+                    <a href="/tags/" class="dropdown-menu button">标签</a>
+                
+                    <a href="/archives/" class="dropdown-menu button">归档</a>
+                
+                    <a href="/friends/" class="dropdown-menu button">友链</a>
+                
+                    <a href="/page/" class="dropdown-menu button">Page</a>
+                
+            </div>
+        
+    </div>
+</header>
+
+
+            <main class="main">
+    
+
+<div class="post-title">
+    <h1 class="post-title__text">
+        2026 我的博客工具箱
+    </h1>
+    <div class="post-title__meta">
+        <a href="/archives/2026/05/" class="post-meta__date button">2026-05-07</a>
+        
+    <span class="separate-dot"></span><a href="/categories/%E5%B7%A5%E5%85%B7%E6%B8%85%E5%8D%95/" class="button">工具清单</a>
+
+ 
+        
+    
+    
+
+
+ 
+
+ 
+    </div>
+</div>
+
+
+
+<article class="post content-card">
+    <div class="post__header"></div>
+    <div class="post__content">
+        <p>这里整理我现在写博客会用到的工具，后续会持续更新。</p>
+<h2 id="建站"><a href="#建站" class="headerlink" title="建站"></a>建站</h2><ul>
+<li>Hexo：静态博客框架</li>
+<li>GitHub Pages：托管与发布</li>
+</ul>
+<h2 id="写作"><a href="#写作" class="headerlink" title="写作"></a>写作</h2><ul>
+<li>Markdown：正文编写</li>
+<li>本地编辑器：草稿与批量修改</li>
+</ul>
+<h2 id="运营"><a href="#运营" class="headerlink" title="运营"></a>运营</h2><ul>
+<li>站内搜索：用于历史内容检索</li>
+<li>统计分析：看哪些内容真正被阅读</li>
+</ul>
+<h2 id="选择标准"><a href="#选择标准" class="headerlink" title="选择标准"></a>选择标准</h2><p>工具不求最多，只看三点：</p>
+<ul>
+<li>上手成本低</li>
+<li>可长期维护</li>
+<li>数据可迁移</li>
+</ul>
+
+    </div>
+     
+    <div class="post-footer__meta"><p>updated at 2026-05-07</p></div> 
+    <div class="post-entry__tags"><a href="/tags/%E5%B7%A5%E5%85%B7/" class="post-tags__link button"># 工具</a><a href="/tags/%E5%8D%9A%E5%AE%A2/" class="post-tags__link button"># 博客</a></div> 
+</article>
+
+
+    <div class="nav">
+        <div class="nav__prev">
+            
+        </div>
+        <div class="nav__next">
+            
+                <a href="/2026/05/07/%E6%88%91%E5%9C%A8%E7%94%A8%E7%9A%84%E8%BD%BB%E9%87%8F%E5%86%99%E4%BD%9C%E5%B7%A5%E4%BD%9C%E6%B5%81/" class="nav__link">
+                    <div>
+                        <div class="nav__label">
+                            Next Post
+                        </div>
+                        <div class="nav__title">
+                            我在用的轻量写作工作流
+                        </div>
+                    </div>
+                    <div>
+                        <svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path d="M434.944 790.624l-45.248-45.248L623.04 512l-233.376-233.376 45.248-45.248L713.568 512z" fill="#808080"></path></svg>
+                    </div>
+                </a>
+            
+        </div>
+    </div>
+
+
+
+    <div class="post__comments content-card" id="comment">
+        
+    <h4>Comments</h4>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+<div id="utterances-container" sid="2026/05/07/2026-我的博客工具箱/"></div>
+<script type="text/javascript">
+  var repo = "SMW-Aya/SMW-Aya.github.io";
+  var issueTerm = "pathname";
+  var theme = "github-light";
+  var label = "";
+  (function () {
+    var container = document.getElementById("utterances-container");
+    var script = document.createElement("script");
+    script.src = "https://utteranc.es/client.js";
+    script.setAttribute("repo", repo);
+    script.setAttribute("issue-term", issueTerm);
+    script.setAttribute("theme", theme);
+    script.setAttribute("label", label);
+    script.crossorigin = "anonymous";
+    script.async = true;
+
+    container.appendChild(script);
+  })();
+</script>
+
+
+
+
+    </div>
+
+
+
+</main>
+
+            <footer class="footer">
+    
+    
+
+
+    
+     
+ 
+
+ 
+    
+        
+        <p class="footer-copyright">
+            Copyright © 2026 <a href="/">莲台野夜行的博客～</a>
+        </p>
+    
+    
+    <p>Powered by <a href="https://hexo.io" target="_blank">Hexo</a> | Theme - <a href="https://github.com/ChrAlpha/hexo-theme-cards" target="_blank">Cards</a></p>
+</footer>
+
+        </div>
+         
+
+ 
+    <script>
+        window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+        ga('create', 'G-XXXXXXXXXX', 'auto');
+        ga('send', 'pageview');
+    </script>
+    <script async src="https://www.google-analytics.com/analytics.js"></script>
+ 
+
+ 
+
+ 
+
+ 
+
+
+
+
+    <script async defer data-website-id="00000000-0000-0000-0000-000000000000"
+        src="https://umami.example.com"></script>
+     
+
+
+
+ 
+
+
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+
+    
+
+    
+
+    
+    
+
+    
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+
+    
+    
+    
+
+
+
+
+    </body>
+</html>
