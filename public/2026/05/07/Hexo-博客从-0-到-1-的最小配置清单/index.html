@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+
+    
+
+    <!-- 渲染优化 -->
+    <meta name="renderer" content="webkit">
+    <meta name="force-rendering" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="HandheldFriendly" content="True" >
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!--icon-->
+
+    
+        <link rel="shortcut icon" href="/images/favicon.svg">
+    
+    
+        <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.svg">
+    
+    
+        <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.svg">
+    
+    
+        <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon.svg">
+    
+    
+        <link rel="mask-icon" href="/images/favicon.svg">
+    
+
+
+    <!-- meta -->
+
+
+<title>Hexo 博客从 0 到 1 的最小配置清单 | 莲台野夜行的博客～</title>
+
+
+    <meta name="keywords" content="Hexo, 配置, 入门, Hexo,Blog,Frontend,Notes">
+
+
+
+
+    <!-- OpenGraph -->
+
+    
+    <meta name="description" content="这篇给刚开始搭博客的同学，整理一份“能用且不折腾”的最小配置。 必配项在站点配置文件里，最少要确认这些字段：  title description author url timezone  如果这些不填完整，后续 SEO、时间显示和站点信息都会比较混乱。 我目前的建议顺序 先把基础信息填完 再确认主题菜单是否会 404 再开启搜索和统计 最后做样式微调  常见坑 导航链接写了，但页面文件没建 评论">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo 博客从 0 到 1 的最小配置清单">
+<meta property="og:url" content="https://smw-aya.github.io/2026/05/07/Hexo-%E5%8D%9A%E5%AE%A2%E4%BB%8E-0-%E5%88%B0-1-%E7%9A%84%E6%9C%80%E5%B0%8F%E9%85%8D%E7%BD%AE%E6%B8%85%E5%8D%95/index.html">
+<meta property="og:site_name" content="莲台野夜行的博客～">
+<meta property="og:description" content="这篇给刚开始搭博客的同学，整理一份“能用且不折腾”的最小配置。 必配项在站点配置文件里，最少要确认这些字段：  title description author url timezone  如果这些不填完整，后续 SEO、时间显示和站点信息都会比较混乱。 我目前的建议顺序 先把基础信息填完 再确认主题菜单是否会 404 再开启搜索和统计 最后做样式微调  常见坑 导航链接写了，但页面文件没建 评论">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2026-05-07T05:30:00.000Z">
+<meta property="article:modified_time" content="2026-05-07T05:08:38.747Z">
+<meta property="article:author" content="莲台野夜行">
+<meta property="article:tag" content="Hexo">
+<meta property="article:tag" content="配置">
+<meta property="article:tag" content="入门">
+<meta name="twitter:card" content="summary_large_image">
+
+
+
+    
+<link rel="stylesheet" href="/css/style/main.css">
+ 
+
+    
+    
+    
+
+    
+
+     
+
+    <!-- custom head -->
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+    <body>
+        <div id="app" tabindex="-1">
+            <header class="header">
+    <div class="header__left">
+        <a href="/" class="button">
+            <span class="logo__text">莲台野夜行</span>
+        </a>
+    </div>
+    <div class="header__right">
+        
+            <div class="navbar__menus">
+                
+                    <a href="/" class="navbar-menu button">首页</a>
+                
+                    <a href="/tags/" class="navbar-menu button">标签</a>
+                
+                    <a href="/archives/" class="navbar-menu button">归档</a>
+                
+                    <a href="/friends/" class="navbar-menu button">友链</a>
+                
+                    <a href="/page/" class="navbar-menu button">Page</a>
+                
+            </div>
+        
+        
+        
+    <a href="/search/" id="btn-search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="24" height="24" fill="currentColor" stroke="currentColor" stroke-width="32"><path d="M192 448c0-141.152 114.848-256 256-256s256 114.848 256 256-114.848 256-256 256-256-114.848-256-256z m710.624 409.376l-206.88-206.88A318.784 318.784 0 0 0 768 448c0-176.736-143.264-320-320-320S128 271.264 128 448s143.264 320 320 320a318.784 318.784 0 0 0 202.496-72.256l206.88 206.88 45.248-45.248z"></path></svg>
+    </a>
+
+
+        
+        
+
+        
+            <a class="dropdown-icon button" id="btn-dropdown" tabindex="0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width='24' height='24' fill="none" stroke="currentColor" stroke-width="0.7" stroke-linecap="round" stroke-linejoin="round"><path fill="currentColor" d="M3.314,4.8h13.372c0.41,0,0.743-0.333,0.743-0.743c0-0.41-0.333-0.743-0.743-0.743H3.314c-0.41,0-0.743,0.333-0.743,0.743C2.571,4.467,2.904,4.8,3.314,4.8z M16.686,15.2H3.314c-0.41,0-0.743,0.333-0.743,0.743s0.333,0.743,0.743,0.743h13.372c0.41,0,0.743-0.333,0.743-0.743S17.096,15.2,16.686,15.2z M16.686,9.257H3.314c-0.41,0-0.743,0.333-0.743,0.743s0.333,0.743,0.743,0.743h13.372c0.41,0,0.743-0.333,0.743-0.743S17.096,9.257,16.686,9.257z"></path></svg></a>
+            <div class="dropdown-menus" id="dropdown-menus">
+                
+                    <a href="/" class="dropdown-menu button">首页</a>
+                
+                    <a href="/tags/" class="dropdown-menu button">标签</a>
+                
+                    <a href="/archives/" class="dropdown-menu button">归档</a>
+                
+                    <a href="/friends/" class="dropdown-menu button">友链</a>
+                
+                    <a href="/page/" class="dropdown-menu button">Page</a>
+                
+            </div>
+        
+    </div>
+</header>
+
+
+            <main class="main">
+    
+
+<div class="post-title">
+    <h1 class="post-title__text">
+        Hexo 博客从 0 到 1 的最小配置清单
+    </h1>
+    <div class="post-title__meta">
+        <a href="/archives/2026/05/" class="post-meta__date button">2026-05-07</a>
+        
+    <span class="separate-dot"></span><a href="/categories/%E5%BB%BA%E7%AB%99%E6%97%A5%E5%BF%97/" class="button">建站日志</a>
+
+ 
+        
+    
+    
+
+
+ 
+
+ 
+    </div>
+</div>
+
+
+
+<article class="post content-card">
+    <div class="post__header"></div>
+    <div class="post__content">
+        <p>这篇给刚开始搭博客的同学，整理一份“能用且不折腾”的最小配置。</p>
+<h2 id="必配项"><a href="#必配项" class="headerlink" title="必配项"></a>必配项</h2><p>在站点配置文件里，最少要确认这些字段：</p>
+<ul>
+<li><code>title</code></li>
+<li><code>description</code></li>
+<li><code>author</code></li>
+<li><code>url</code></li>
+<li><code>timezone</code></li>
+</ul>
+<p>如果这些不填完整，后续 SEO、时间显示和站点信息都会比较混乱。</p>
+<h2 id="我目前的建议顺序"><a href="#我目前的建议顺序" class="headerlink" title="我目前的建议顺序"></a>我目前的建议顺序</h2><ol>
+<li>先把基础信息填完</li>
+<li>再确认主题菜单是否会 404</li>
+<li>再开启搜索和统计</li>
+<li>最后做样式微调</li>
+</ol>
+<h2 id="常见坑"><a href="#常见坑" class="headerlink" title="常见坑"></a>常见坑</h2><ul>
+<li>导航链接写了，但页面文件没建</li>
+<li>评论系统开了，但平台授权没做</li>
+<li>主题和站点配置混在一起改，导致“改了没生效”</li>
+</ul>
+<h2 id="一句话总结"><a href="#一句话总结" class="headerlink" title="一句话总结"></a>一句话总结</h2><p>先“正确可用”，再“精致好看”。</p>
+
+    </div>
+     
+    <div class="post-footer__meta"><p>updated at 2026-05-07</p></div> 
+    <div class="post-entry__tags"><a href="/tags/Hexo/" class="post-tags__link button"># Hexo</a><a href="/tags/%E9%85%8D%E7%BD%AE/" class="post-tags__link button"># 配置</a><a href="/tags/%E5%85%A5%E9%97%A8/" class="post-tags__link button"># 入门</a></div> 
+</article>
+
+
+    <div class="nav">
+        <div class="nav__prev">
+            
+                <a href="/2026/05/07/%E6%88%91%E5%9C%A8%E7%94%A8%E7%9A%84%E8%BD%BB%E9%87%8F%E5%86%99%E4%BD%9C%E5%B7%A5%E4%BD%9C%E6%B5%81/" class="nav__link">
+                    <div>
+                        <svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path d="M589.088 790.624L310.464 512l278.624-278.624 45.248 45.248L400.96 512l233.376 233.376z" fill="#808080"></path></svg>
+                    </div>
+                    <div>
+                        <div class="nav__label">
+                            Previous Post
+                        </div>
+                        <div class="nav__title">
+                            我在用的轻量写作工作流
+                        </div>
+                    </div>
+                </a>
+            
+        </div>
+        <div class="nav__next">
+            
+                <a href="/2026/03/11/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/" class="nav__link">
+                    <div>
+                        <div class="nav__label">
+                            Next Post
+                        </div>
+                        <div class="nav__title">
+                            我的第一篇文章：为什么重新开始写博客
+                        </div>
+                    </div>
+                    <div>
+                        <svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path d="M434.944 790.624l-45.248-45.248L623.04 512l-233.376-233.376 45.248-45.248L713.568 512z" fill="#808080"></path></svg>
+                    </div>
+                </a>
+            
+        </div>
+    </div>
+
+
+
+    <div class="post__comments content-card" id="comment">
+        
+    <h4>Comments</h4>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+<div id="utterances-container" sid="2026/05/07/Hexo-博客从-0-到-1-的最小配置清单/"></div>
+<script type="text/javascript">
+  var repo = "SMW-Aya/SMW-Aya.github.io";
+  var issueTerm = "pathname";
+  var theme = "github-light";
+  var label = "";
+  (function () {
+    var container = document.getElementById("utterances-container");
+    var script = document.createElement("script");
+    script.src = "https://utteranc.es/client.js";
+    script.setAttribute("repo", repo);
+    script.setAttribute("issue-term", issueTerm);
+    script.setAttribute("theme", theme);
+    script.setAttribute("label", label);
+    script.crossorigin = "anonymous";
+    script.async = true;
+
+    container.appendChild(script);
+  })();
+</script>
+
+
+
+
+    </div>
+
+
+
+</main>
+
+            <footer class="footer">
+    
+    
+
+
+    
+     
+ 
+
+ 
+    
+        
+        <p class="footer-copyright">
+            Copyright © 2026 <a href="/">莲台野夜行的博客～</a>
+        </p>
+    
+    
+    <p>Powered by <a href="https://hexo.io" target="_blank">Hexo</a> | Theme - <a href="https://github.com/ChrAlpha/hexo-theme-cards" target="_blank">Cards</a></p>
+</footer>
+
+        </div>
+         
+
+ 
+    <script>
+        window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+        ga('create', 'G-XXXXXXXXXX', 'auto');
+        ga('send', 'pageview');
+    </script>
+    <script async src="https://www.google-analytics.com/analytics.js"></script>
+ 
+
+ 
+
+ 
+
+ 
+
+
+
+
+    <script async defer data-website-id="00000000-0000-0000-0000-000000000000"
+        src="https://umami.example.com"></script>
+     
+
+
+
+ 
+
+
+    
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+
+    
+
+    
+
+    
+    
+
+    
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+
+    
+    
+    
+
+
+
+
+    </body>
+</html>
